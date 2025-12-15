@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Platforms - Scaliora Capital | Private Equity, Venture Capital & Advisory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Platforms Page Specific Styles */
+        .platforms-hero {
+            background: linear-gradient(135deg, #1a4347 0%, #2a7c6f 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        
+        .platforms-hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            line-height: 1.2;
+        }
+        
+        .platforms-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        /* Platform Sections */
+        .platform-section {
+            padding: 5rem 2rem;
+            background: var(--color-background-alt);
+        }
+        
+        .platform-section:nth-child(even) {
+            background: var(--color-secondary);
+        }
+        
+        .platform-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .platform-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--color-border);
+        }
+        
+        .platform-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--color-primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .platform-title-group h2 {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin: 0 0 0.5rem 0;
+            font-weight: 300;
+            font-family: 'Merriweather', serif;
+        }
+        
+        .platform-subtitle {
+            color: var(--color-text);
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin: 0;
+        }
+        
+        /* Two Column Content */
+        .platform-two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .platform-description {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--color-text);
+        }
+        
+        .platform-description p {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Features Container */
+        .features-container {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        
+        .features-container h3 {
+            color: var(--color-primary);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--color-border);
+            font-weight: 500;
+        }
+        
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .features-list li {
+            padding: 0.8rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--color-text);
+            line-height: 1.6;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .features-list li:before {
+            content: "•";
+            color: var(--color-primary);
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+        
+        /* Capabilities Grid */
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .capability-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--color-primary);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            transition: transform 0.2s ease;
+        }
+        
+        .capability-item:hover {
+            transform: translateY(-2px);
+        }
+        
+        .capability-item p {
+            margin: 0;
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+        
+        /* Advisory Note */
+        .advisory-note {
+            background: var(--color-primary);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .advisory-note i {
+            font-size: 2rem;
+            opacity: 0.9;
+        }
+        
+        .advisory-note p {
+            margin: 0;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .platforms-cta {
+            background: var(--color-secondary);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .platforms-cta h2 {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            font-family: 'Merriweather', serif;
+        }
+        
+        .platforms-cta p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: var(--color-text);
+            line-height: 1.7;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .platform-two-column {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .capabilities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .platforms-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .platform-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+            
+            .platform-title-group h2 {
+                font-size: 2rem;
+            }
+            
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .advisory-note {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+                padding: 2rem;
+            }
+            
+            .platforms-cta h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="Scaliora Capital">
+            </div>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="platforms.html" class="active">Platforms</a></li>
+                <li><a href="sectors.html">Sectors</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="founders.html">For Founders</a></li>
+                <li><a href="insights.html">Insights</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="platforms-hero">
+        <h1 class="text-merriweather">Our Investment Platforms</h1>
+        <p>Strategic capital solutions designed for sustainable, scalable growth across the investment lifecycle</p>
+    </section>
+
+    <!-- Private Equity Section -->
+    <section class="platform-section">
+        <div class="platform-content">
+            <div class="platform-header">
+                <div class="platform-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="platform-title-group">
+                    <h2>Private Equity</h2>
+                    <p class="platform-subtitle">Growth and control investments in established businesses</p>
+                </div>
+            </div>
+            
+            <div class="platform-two-column">
+                <div class="platform-description">
+                    <p>Scaliora Capital undertakes growth and control-oriented investments in established businesses that demonstrate strong fundamentals, scalable operating models and professional management intent.</p>
+                    <p>We partner with promoters and leadership teams to institutionalise operations, strengthen governance, optimise capital structure and accelerate sustainable expansion.</p>
+                </div>
+                
+                <div class="features-container">
+                    <h3>Our Private Equity Approach</h3>
+                    <ul class="features-list">
+                        <li>Established businesses with clear growth visibility</li>
+                        <li>Scalable revenue and operating models</li>
+                        <li>Ethical promoters with long-term vision</li>
+                        <li>Businesses ready for institutional governance</li>
+                        <li>Strategic planning & capital structuring</li>
+                        <li>Corporate governance & board frameworks</li>
+                        <li>Institutional readiness & exit planning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venture Capital Section -->
+    <section class="platform-section">
+        <div class="platform-content">
+            <div class="platform-header">
+                <div class="platform-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="platform-title-group">
+                    <h2>Venture Capital</h2>
+                    <p class="platform-subtitle">Partnering with innovative founders from Pre-Seed to Pre-IPO</p>
+                </div>
+            </div>
+            
+            <div class="platform-two-column">
+                <div class="features-container">
+                    <h3>What We Look For</h3>
+                    <ul class="features-list">
+                        <li>Strong founding teams with execution capability</li>
+                        <li>Scalable and innovative business models</li>
+                        <li>Clear market opportunity and defensible positioning</li>
+                        <li>Commitment to governance from an early stage</li>
+                    </ul>
+                </div>
+                
+                <div class="features-container">
+                    <h3>Our Support Framework</h3>
+                    <ul class="features-list">
+                        <li>Founder-level capital partnership</li>
+                        <li>Go-to-market & scale strategy</li>
+                        <li>Investor reporting & financial discipline</li>
+                        <li>Strategic guidance for follow-on fundraising</li>
+                        <li>IPO and institutional readiness</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="platform-description" style="margin-top: 3rem;">
+                <p>Scaliora Capital supports innovation-led enterprises from Pre-Seed to Pre-IPO stages, partnering closely with founders to convert vision into scalable execution.</p>
+                <p>We invest across the full venture lifecycle, providing both early conviction capital and growth-stage partnership support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Debt & Strategic Advisory Section -->
+    <section class="platform-section">
+        <div class="platform-content">
+            <div class="platform-header">
+                <div class="platform-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <div class="platform-title-group">
+                    <h2>Debt & Strategic Advisory</h2>
+                    <p class="platform-subtitle">Structured solutions for growth without dilution</p>
+                </div>
+            </div>
+            
+            <div class="platform-description">
+                <p>Scaliora Capital delivers structured debt solutions and institutional advisory services for businesses seeking growth without immediate equity dilution or requiring comprehensive strategic restructuring.</p>
+            </div>
+            
+            <div class="capabilities-grid">
+                <div class="capability-item">
+                    <p>Structured Debt & Growth Financing</p>
+                </div>
+                <div class="capability-item">
+                    <p>Working Capital & Expansion Capital</p>
+                </div>
+                <div class="capability-item">
+                    <p>Financial, Tax & Transaction Due Diligence</p>
+                </div>
+                <div class="capability-item">
+                    <p>Legal & Secretarial Due Diligence</p>
+                </div>
+                <div class="capability-item">
+                    <p>Corporate Structuring & Restructuring</p>
+                </div>
+                <div class="capability-item">
+                    <p>Compliance & Regulatory Advisory</p>
+                </div>
+                <div class="capability-item">
+                    <p>Audit Coordination & Financial Reporting</p>
+                </div>
+                <div class="capability-item">
+                    <p>IPO & Pre-IPO Advisory</p>
+                </div>
+                <div class="capability-item">
+                    <p>Business Transformation & Turnaround Advisory</p>
+                </div>
+            </div>
+            
+            <div class="advisory-note">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <p><strong>Institutional Execution Standards:</strong> All advisory and due diligence functions are executed through our panel of leading Chartered Accountants, Company Secretaries and Law Firms, ensuring institutional-grade quality, compliance and execution standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Scaliora Capital. All rights reserved.</p>
+            <p style="margin-top: 0.5rem;">Strategic Capital for Scalable Growth | Chandigarh TriCity, India</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (navToggle) {
+                navToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('nav')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
