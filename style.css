@@ -625,6 +625,23 @@ footer p {
     }
 }
 
+.form-embed-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  max-width: 900px;
+  margin: 2rem auto 0;
+}
+
+.form-embed-card iframe {
+  width: 100%;
+  min-height: 900px;
+  border: none;
+}
+
+
+
 
 @media (max-width: 768px) {
     .nav-links {
@@ -670,4 +687,11 @@ footer p {
         width: 100%;
         text-align: center;
     }
+    .form-embed-card {
+    padding: 1rem;
+  }
+
+  .form-embed-card iframe {
+    min-height: 1050px;
+  }
 }
